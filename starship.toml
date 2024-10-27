@@ -1,0 +1,76 @@
+format = """
+[](mauve)\
+$username\
+[](bg:red fg:mauve)\
+$directory\
+[](bg:maroon fg:red)\
+$git_branch\
+$git_status\
+[](bg:peach fg:maroon)\
+$kubernetes\
+[](bg:yellow fg:peach)\
+$golang\
+$java\
+$nodejs\
+[](bg:green fg:yellow)\
+$package\
+[](bg:teal fg:green)\
+$time\
+[ ](teal)\
+"""
+
+palette = "macchiato"
+
+[palettes.macchiato]
+mauve = "#c6a0f6"
+red = "#ed8796"
+maroon = "#ee99a0"
+peach = "#f5a97f"
+yellow = "#eed49f"
+green = "#a6da95"
+teal = "#8bd5ca"
+sky = "#91d7e3"
+crust = "#181926"
+
+[username]
+format = '[$user ](bg:mauve fg:crust)'
+show_always = true
+
+[directory]
+format = '[ $path ](bg:red fg:crust)'
+
+[git_branch]
+format = "[ $branch ](bg:maroon fg:crust)"
+
+[git_status]
+format = '([\[$all_status\] ](bg:maroon fg:crust))'
+
+[kubernetes]
+disabled = false
+format = "[ $context ](bg:peach fg:crust)"
+
+[[kubernetes.contexts]]
+context_pattern = "sre(?P<cluster>\\S+)"
+context_alias = "sre [$cluster]"
+
+[[kubernetes.contexts]]
+context_pattern = "(?P<team>\\S+)lab(?P<number>\\S+)"
+context_alias = "$team [$number]"
+
+[golang]
+format = '[ $symbol($version) ](bg:yellow fg:crust)'
+
+[java]
+format = '[ $symbol($version) ](bg:yellow fg:crust)'
+
+[nodejs]
+format = '[ $symbol($version) ](bg:yellow fg:crust)'
+
+[package]
+format = '[ $version ](bg:green fg:crust)'
+version_format = "${raw}"
+
+[time]
+disabled = false
+format = '[ $time ](bg:teal fg:crust)'
+time_format = "%R"
