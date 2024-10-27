@@ -1,5 +1,8 @@
 return {
 	"stevearc/oil.nvim",
-	opts = {},
+  ---@module "oil"
+	opts = {
+    use_default_keymaps = true,
+  },
 	dependencies = { "nvim-tree/nvim-web-devicons" },
 }
