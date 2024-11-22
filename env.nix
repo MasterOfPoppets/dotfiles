@@ -25,5 +25,6 @@ pkgs.buildEnv {
     ripgrep
     starship
     terraform
+    wezterm
   ];
 }
