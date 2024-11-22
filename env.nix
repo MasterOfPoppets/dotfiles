@@ -9,7 +9,6 @@ pkgs.buildEnv {
     direnv
     docker
     fd
-    fzf
     gcc
     git
     httpie
