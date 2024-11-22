@@ -8,7 +8,7 @@ return {
   {
     "williamboman/mason-lspconfig.nvim",
     opts = {
-      ensure_installed = { "gopls", "jdtls", "lua_ls", "terraformls", "tsserver" },
+      ensure_installed = { "gopls", "jdtls", "lua_ls", "terraformls", "ts_ls" },
     },
   },
   {
@@ -20,7 +20,7 @@ return {
       lspconfig.jdtls.setup({ capabilities = capabilities })
       lspconfig.lua_ls.setup({ capabilities = capabilities })
       lspconfig.terraformls.setup({})
-      lspconfig.tsserver.setup({ capabilities = capabilities })
+      lspconfig.ts_ls.setup({ capabilities = capabilities })
 
       vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
       vim.keymap.set("n", "<leader>gD", vim.lsp.buf.declaration, {})
