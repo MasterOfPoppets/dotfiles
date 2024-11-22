@@ -25,6 +25,5 @@ pkgs.buildEnv {
     ripgrep
     starship
     terraform
-    jq
   ];
 }
