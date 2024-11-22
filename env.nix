@@ -9,6 +9,7 @@ pkgs.buildEnv {
     direnv
     docker
     fd
+    fzf
     gcc
     git
     httpie
@@ -25,6 +26,5 @@ pkgs.buildEnv {
     ripgrep
     starship
     terraform
-    jq
   ];
 }
