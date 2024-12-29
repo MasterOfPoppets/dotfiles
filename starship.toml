@@ -33,7 +33,8 @@ sky = "#91d7e3"
 crust = "#181926"
 
 [username]
-format = '[$user ](bg:mauve fg:crust)'
+format = '[ $user ](bg:mauve fg:crust)'
+aliases = { "gareth.hughes" = "gareth" }
 show_always = true
 
 [directory]
